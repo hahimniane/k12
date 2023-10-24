@@ -193,7 +193,7 @@ class MenuPage extends StatelessWidget {
                             // provider.activeThemeData == ParentTheme.lightTheme()
                             // ?
                             NavigationHelper.pushPage(
-                                context, const Announcement());
+                                context, AnnouncementHomePage());
                             // : NavigationHelper.pushPage(
                             //     context,
                             //     AdminAnnouncementPage(),

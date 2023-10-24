@@ -187,16 +187,14 @@ class NewMenuPage extends StatelessWidget {
                       crossAxisCount: 2,
                       children: [
                         _buildMenuItem(
-                          // icon: const AssetImage(
-                          //     'images/information-speaker-notification-announcement-512.ico'),
-                          icon: const AssetImage('images/announcement.png'),
+                          icon: const AssetImage('images/img_5.png'),
                           label: 'Announcement',
                           color: parentAppColor,
                           onTap: () {
                             // provider.activeThemeData == ParentTheme.lightTheme()
                             // ?
                             NavigationHelper.pushPage(
-                                context, const Announcement());
+                                context, AnnouncementHomePage());
                             // : NavigationHelper.pushPage(
                             //     context,
                             //     AdminAnnouncementPage(),
@@ -204,26 +202,13 @@ class NewMenuPage extends StatelessWidget {
                           },
                         ),
                         _buildMenuItem(
-                          icon: AssetImage('images/payement.png'),
+                          icon: const AssetImage('images/img_4.png'),
                           label: 'Attendance',
                           color: parentAppColor,
-                          onTap: () {
-                            // provider.activeThemeData == ParentTheme.lightTheme()
-                            //     ? NavigationHelper.pushPage(
-                            //         context,
-                            //         GalleryPage(
-                            //           isFromSearch: false,
-                            //         ))
-                            //     : NavigationHelper.pushPage(
-                            //         context,
-                            //         AdminGalleryPage(
-                            //             // isFromSearch: false,
-                            //             ),
-                            //       );
-                          },
+                          onTap: () {},
                         ),
                         _buildMenuItem(
-                          icon: Icons.camera_alt,
+                          icon: const AssetImage('images/img_3.png'),
                           label: 'Schedule',
                           color: const Color(0xff0CA789),
                           onTap: () {
@@ -244,14 +229,14 @@ class NewMenuPage extends StatelessWidget {
                         _buildMenuItem(
                           // icon: const AssetImage(
                           //     'images/information-speaker-notification-announcement-512.ico'),
-                          icon: AssetImage('images/announcement.png'),
+                          icon: AssetImage('images/img_6.png'),
                           label: 'Exam Score',
                           color: parentAppColor,
                           onTap: () {
                             // provider.activeThemeData == ParentTheme.lightTheme()
                             // ?
                             NavigationHelper.pushPage(
-                                context, const Announcement());
+                                context, AnnouncementHomePage());
                             // : NavigationHelper.pushPage(
                             //     context,
                             //     AdminAnnouncementPage(),
@@ -262,246 +247,8 @@ class NewMenuPage extends StatelessWidget {
                           icon: AssetImage('images/payement.png'),
                           label: 'Payment',
                           color: parentAppColor,
-                          onTap: () {
-                            // provider.activeThemeData == ParentTheme.lightTheme()
-                            //     ? NavigationHelper.pushPage(
-                            //         context,
-                            //         GalleryPage(
-                            //           isFromSearch: false,
-                            //         ))
-                            //     : NavigationHelper.pushPage(
-                            //         context,
-                            //         AdminGalleryPage(
-                            //             // isFromSearch: false,
-                            //             ),
-                            //       );
-                          },
+                          onTap: () {},
                         ),
-                        _buildMenuItem(
-                          icon: Icons.camera_alt,
-                          label: 'Messages',
-                          color: const Color(0xff0CA789),
-                          onTap: () {
-                            // provider.activeThemeData == ParentTheme.lightTheme()
-                            //     ? NavigationHelper.pushPage(
-                            //         context,
-                            //         GalleryPage(
-                            //           isFromSearch: false,
-                            //         ))
-                            //     : NavigationHelper.pushPage(
-                            //         context,
-                            //         AdminGalleryPage(
-                            //             // isFromSearch: false,
-                            //             ),
-                            //       );
-                          },
-                        ),
-                        _buildMenuItem(
-                          icon: Icons.camera_alt,
-                          label: 'Galerry',
-                          color: const Color(0xff0CA789),
-                          onTap: () {
-                            // provider.activeThemeData == ParentTheme.lightTheme()
-                            //     ? NavigationHelper.pushPage(
-                            //         context,
-                            //         GalleryPage(
-                            //           isFromSearch: false,
-                            //         ))
-                            //     : NavigationHelper.pushPage(
-                            //         context,
-                            //         AdminGalleryPage(
-                            //             // isFromSearch: false,
-                            //             ),
-                            //       );
-                          },
-                        ),
-                        _buildMenuItem(
-                          icon: Icons.camera_alt,
-                          label: 'Another',
-                          color: parentAppColor,
-                          onTap: () {
-                            // provider.activeThemeData == ParentTheme.lightTheme()
-                            //     ? NavigationHelper.pushPage(
-                            //         context,
-                            //         GalleryPage(
-                            //           isFromSearch: false,
-                            //         ))
-                            //     : NavigationHelper.pushPage(
-                            //         context,
-                            //         AdminGalleryPage(
-                            //             // isFromSearch: false,
-                            //             ),
-                            //       );
-                          },
-                        ),
-                        // _buildMenuItem(
-                        //   icon: Icons.camera_alt,
-                        //   label: 'sdfsdf',
-                        //   color: const Color(0xff0CA789),
-                        //   onTap: () {
-                        //     // provider.activeThemeData == ParentTheme.lightTheme()
-                        //     //     ? NavigationHelper.pushPage(
-                        //     //         context,
-                        //     //         GalleryPage(
-                        //     //           isFromSearch: false,
-                        //     //         ))
-                        //     //     : NavigationHelper.pushPage(
-                        //     //         context,
-                        //     //         AdminGalleryPage(
-                        //     //             // isFromSearch: false,
-                        //     //             ),
-                        //     //       );
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: Icons.mark_chat_unread_rounded,
-                        //   label: 'Messages',
-                        //   color: const Color(0xffFAC711),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             MessagesPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context,
-                        //             AdminMessagesPage(
-                        //               isFromSearch: false,
-                        //             ),
-                        //           );
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: FontAwesomeIcons.puzzlePiece,
-                        //   label: 'Event Program',
-                        //   color: const Color(0xff2D9BF0),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             EtkinlikPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminActivityPage());
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: FontAwesomeIcons.plus,
-                        //   label: 'Progress Tracking',
-                        //   color: const Color(0xff414BB2),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             GelisimTakipPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminProgressTrackingHomePage());
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: Icons.restaurant,
-                        //   label: 'Food List',
-                        //   color: const Color(0xff652CB3),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             FoodPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminFoodHomePage());
-                        //
-                        //     // AdminFoodHomePage
-                        //
-                        //     // Navigator.push(
-                        //     //     context,
-                        //     //     MaterialPageRoute(
-                        //     //         builder: (context) => FoodPage(
-                        //     //               isFromSearch: false,
-                        //     //             )));
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: FontAwesomeIcons.heartCrack,
-                        //   label: 'Health',
-                        //   color: const Color(0xff14CDD4),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             HealthWelcomePage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminHealthHomePage());
-                        //     // NavigationHelper.pushPage(
-                        //     //     context,
-                        //     //     const HealthWelcomePage(
-                        //     //       isFromSearch: false,
-                        //     //     ));
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: Icons.checklist,
-                        //   label: 'Attendance',
-                        //   color: const Color(0xff050039),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             AttendancePage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(context,
-                        //             AdminAttendanceStudentInfoInputPage());
-                        //
-                        //     // NavigationHelper.pushPage(
-                        //     //     context,
-                        //     //     const AttendancePage(
-                        //     //       isFromSearch: false,
-                        //     //     ));
-                        //   },
-                        // ),
-                        // _buildMenuItem(
-                        //   icon: FontAwesomeIcons.bus,
-                        //   label: 'School Service',
-                        //   color: const Color(0xffDA0064),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             const ServicePage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminSchoolServiceHomePage());
-                        //
-                        //     // NavigationHelper.pushPage(
-                        //     //     context,
-                        //     //     const ServicePage(
-                        //     //       isFromSearch: false,
-                        //     //     ));
-                        //   },
-                        // ),
-                        // const SizedBox(),
-                        // _buildMenuItem(
-                        //   icon: FontAwesomeIcons.bookOpen,
-                        //   label: 'School Bulletin',
-                        //   color: const Color(0xffF24727),
-                        //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             SchoolBulettinPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context, AdminSchoolBulletinHomePage());
                       ]
                       //},
                       ),
