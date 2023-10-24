@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../MenuPage.dart';
+import '../new_menu_page.dart';
 import '../utils/build_appbar.dart';
+import '../utils/const.dart';
 
 class profileSelectionStudentCard extends StatelessWidget {
   final String studentName;
@@ -52,9 +54,7 @@ class profileSelectionStudentCard extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => MenuPage(
-                                studentNumber: '12345',
-                              )),
+                          builder: (context) => const NewMenuPage()),
                     );
                   },
                   child: const Text(

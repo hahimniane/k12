@@ -143,6 +143,7 @@ const MaterialColor parentMaterialColor =
   100: Color(0xFF558B2F),
   // Include other shades if needed
 });
+final lightBlueColor = Color(0xffD0F0F1);
 final Color profileSecimiBackgroundColor = Color(0xffE7F7F8);
 final Color adminPageBackgroundColor = Color(0xfffce5c7);
 

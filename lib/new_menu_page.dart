@@ -1,61 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:maarif_k12/parent/Announcement/announcement_home_page.dart';
-import 'package:maarif_k12/parent/profile_selection.dart';
-import 'package:maarif_k12/theme_service.dart';
 import 'package:maarif_k12/utils/build_appbar.dart';
 import 'package:maarif_k12/utils/const.dart';
 import 'package:maarif_k12/utils/navigation_helper.dart';
-import 'package:provider/provider.dart';
 
-import 'ParentTheme.dart';
-
-class MenuPage extends StatelessWidget {
-  final String studentNumber;
-  // final CarouselController carouselController = CarouselController();
-
-  const MenuPage({Key? key, this.studentNumber = '1234'}) : super(key: key);
+class NewMenuPage extends StatelessWidget {
+  const NewMenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ThemeProvider provider = Provider.of<ThemeProvider>(context, listen: true);
     EdgeInsets padding = MediaQuery.of(context).padding;
     double availableHeight =
         MediaQuery.of(context).size.height - padding.top - padding.bottom;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50.0),
-        child: AppBar(
-          // backgroundColor:  Colors.blue,
-          // backgroundColor: Theme.of(context).primaryColor == adminAppColor
-          //     ? adminPageBackgroundColor
-          //     :
-          backgroundColor: const Color(0xffD0F0F1),
-          leading: Container(),
-          actions: [
-            IconButton(
-              onPressed: () {
-                // if (Theme.of(context).primaryColor == adminAppColor) {
-                //   NavigationHelper.pushPage(
-                //       context, AdminProfileSelectionPage());
-                // } else {
-                //   NavigationHelper.pushPage(
-                //       context, ParentProfileSelectionPage());
-                // }
-              },
-              icon: Icon(
-                Icons.person,
-                color:
-                    // Theme.of(context).primaryColor == adminAppColor
-                    //     ? adminAppColor:
-                    parentAppColor,
-              ),
-            ),
-          ],
-        ),
-      ),
+      backgroundColor: lightBlueColor,
+      // appBar: PreferredSize(
+      //   preferredSize: const Size.fromHeight(20.0),
+      //   child: AppBar(
+      //     // backgroundColor:  Colors.blue,
+      //     // backgroundColor: Theme.of(context).primaryColor == adminAppColor
+      //     //     ? adminPageBackgroundColor
+      //     //     :
+      //     backgroundColor: lightBlueColor,
+      //     leading: Container(),
+      //     actions: [
+      //       IconButton(
+      //         onPressed: () {
+      //           // if (Theme.of(context).primaryColor == adminAppColor) {
+      //           //   NavigationHelper.pushPage(
+      //           //       context, AdminProfileSelectionPage());
+      //           // } else {
+      //           //   NavigationHelper.pushPage(
+      //           //       context, ParentProfileSelectionPage());
+      //           // }
+      //         },
+      //         icon: const Icon(
+      //           Icons.person,
+      //           color:
+      //               // Theme.of(context).primaryColor == adminAppColor
+      //               //     ? adminAppColor:
+      //               parentAppColor,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: SafeArea(
+        top: true,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,20 +56,35 @@ class MenuPage extends StatelessWidget {
             // Theme.of(context).primaryColor == adminAppColor
             //?
             Container(
-              decoration: BoxDecoration(
-                color: adminPageBackgroundColor,
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
-                ),
+              decoration: const BoxDecoration(
+                // color: Colors.orange,
+                color: Color(0xffCFF0F1),
+                borderRadius: BorderRadius.only(
+                    // bottomLeft: Radius.circular(25),
+                    // bottomRight: Radius.circular(25),
+                    ),
               ),
-              height: availableHeight * 0.2746,
+              height: availableHeight * 0.245,
               width: MediaQuery.of(context).size.width,
               child: Padding(
-                padding: const EdgeInsets.only(top: 20.0),
+                padding: const EdgeInsets.only(top: 5.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Container(
+                      // color: Colors.yellow,
+                      height: availableHeight * 0.07,
+                      child: const ListTile(
+                        leading: Icon(
+                          Icons.search,
+                          color: parentAppColor,
+                        ),
+                        trailing: Icon(
+                          Icons.person,
+                          color: parentAppColor,
+                        ),
+                      ),
+                    ),
                     Expanded(
                       child: Container(
                         decoration: const BoxDecoration(
@@ -86,13 +94,10 @@ class MenuPage extends StatelessWidget {
                         width: screenWidth * 0.31466,
                         // height: 100,
                         // width: 100,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Icon(
-                            Icons.person,
-                            size: 30,
-                            color: adminAppColor,
-                          ),
+                        child: const Icon(
+                          Icons.person,
+                          size: 50,
+                          color: parentAppColor,
                         ),
                       ),
                     ),
@@ -102,21 +107,19 @@ class MenuPage extends StatelessWidget {
                     Expanded(
                       flex: 0,
                       child: Text(
-                        'Arzu',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: adminAppColor),
+                        'Yavuz Selim Celiktas -305',
+                        style: GoogleFonts.notoSans(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                            color: parentAppColor),
                       ),
                     ),
-                    Text(
-                      '(Teacher)',
+                    const Text(
+                      '(Student)',
                       style: TextStyle(
-                          color: adminAppColor, fontWeight: FontWeight.bold),
+                          color: parentAppColor, fontWeight: FontWeight.w400),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    )
+                    const SizedBox(height: 0)
                   ],
                 ),
               ),
@@ -171,24 +174,24 @@ class MenuPage extends StatelessWidget {
             ,
             Expanded(
               child: Container(
-                // height: MediaQuery.of(context).size.height * 0.48,
-                // color: Colors.blue,
-                padding: const EdgeInsets.only(bottom: 5.0),
+                height: availableHeight,
+                color: Colors.white,
                 child: Center(
                   child: GridView.count(
-                      padding: const EdgeInsets.all(10),
-                      shrinkWrap: true,
-                      mainAxisSpacing: 40,
-                      crossAxisSpacing: 55,
+                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      shrinkWrap: false,
+                      childAspectRatio: 1.4,
+                      mainAxisSpacing: 0.3,
+                      crossAxisSpacing: 0,
                       physics: const NeverScrollableScrollPhysics(),
-                      crossAxisCount: 3,
+                      crossAxisCount: 2,
                       children: [
                         _buildMenuItem(
                           // icon: const AssetImage(
                           //     'images/information-speaker-notification-announcement-512.ico'),
-                          icon: Icons.notification_important_rounded,
+                          icon: const AssetImage('images/announcement.png'),
                           label: 'Announcement',
-                          color: const Color(0xffF55B5B),
+                          color: parentAppColor,
                           onTap: () {
                             // provider.activeThemeData == ParentTheme.lightTheme()
                             // ?
@@ -200,23 +203,154 @@ class MenuPage extends StatelessWidget {
                             // );
                           },
                         ),
+                        _buildMenuItem(
+                          icon: AssetImage('images/payement.png'),
+                          label: 'Attendance',
+                          color: parentAppColor,
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
+                        _buildMenuItem(
+                          icon: Icons.camera_alt,
+                          label: 'Schedule',
+                          color: const Color(0xff0CA789),
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
+                        _buildMenuItem(
+                          // icon: const AssetImage(
+                          //     'images/information-speaker-notification-announcement-512.ico'),
+                          icon: AssetImage('images/announcement.png'),
+                          label: 'Exam Score',
+                          color: parentAppColor,
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            // ?
+                            NavigationHelper.pushPage(
+                                context, const Announcement());
+                            // : NavigationHelper.pushPage(
+                            //     context,
+                            //     AdminAnnouncementPage(),
+                            // );
+                          },
+                        ),
+                        _buildMenuItem(
+                          icon: AssetImage('images/payement.png'),
+                          label: 'Payment',
+                          color: parentAppColor,
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
+                        _buildMenuItem(
+                          icon: Icons.camera_alt,
+                          label: 'Messages',
+                          color: const Color(0xff0CA789),
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
+                        _buildMenuItem(
+                          icon: Icons.camera_alt,
+                          label: 'Galerry',
+                          color: const Color(0xff0CA789),
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
+                        _buildMenuItem(
+                          icon: Icons.camera_alt,
+                          label: 'Another',
+                          color: parentAppColor,
+                          onTap: () {
+                            // provider.activeThemeData == ParentTheme.lightTheme()
+                            //     ? NavigationHelper.pushPage(
+                            //         context,
+                            //         GalleryPage(
+                            //           isFromSearch: false,
+                            //         ))
+                            //     : NavigationHelper.pushPage(
+                            //         context,
+                            //         AdminGalleryPage(
+                            //             // isFromSearch: false,
+                            //             ),
+                            //       );
+                          },
+                        ),
                         // _buildMenuItem(
                         //   icon: Icons.camera_alt,
-                        //   label: 'Galerry',
+                        //   label: 'sdfsdf',
                         //   color: const Color(0xff0CA789),
                         //   onTap: () {
-                        //     provider.activeThemeData == ParentTheme.lightTheme()
-                        //         ? NavigationHelper.pushPage(
-                        //             context,
-                        //             GalleryPage(
-                        //               isFromSearch: false,
-                        //             ))
-                        //         : NavigationHelper.pushPage(
-                        //             context,
-                        //             AdminGalleryPage(
-                        //                 // isFromSearch: false,
-                        //                 ),
-                        //           );
+                        //     // provider.activeThemeData == ParentTheme.lightTheme()
+                        //     //     ? NavigationHelper.pushPage(
+                        //     //         context,
+                        //     //         GalleryPage(
+                        //     //           isFromSearch: false,
+                        //     //         ))
+                        //     //     : NavigationHelper.pushPage(
+                        //     //         context,
+                        //     //         AdminGalleryPage(
+                        //     //             // isFromSearch: false,
+                        //     //             ),
+                        //     //       );
                         //   },
                         // ),
                         // _buildMenuItem(
@@ -379,42 +513,42 @@ class MenuPage extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildMenuItem(
-      {required var icon,
-      required String label,
-      Color? color,
-      required VoidCallback onTap}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            icon is IconData
-                ? Icon(
-                    icon,
-                    color: color,
-                    size: 24,
-                  )
-                : Image(
-                    image: icon,
-                    height: 40,
-                    color: const Color(0xffF55B5B),
-                  ),
-            const SizedBox(height: 2.0),
-            Expanded(
-              child: Text(
-                label,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 13.0, fontWeight: FontWeight.bold, color: color),
-              ),
+Widget _buildMenuItem(
+    {required var icon,
+    required String label,
+    Color? color,
+    required VoidCallback onTap}) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon is IconData
+              ? Icon(
+                  icon,
+                  color: color,
+                  size: 24,
+                )
+              : Image(
+                  image: icon,
+                  height: 40,
+                  // color: const Color(0xffF55B5B),
+                ),
+          const SizedBox(height: 2.0),
+          Expanded(
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 13.0, fontWeight: FontWeight.bold, color: color),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
 }
