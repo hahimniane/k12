@@ -84,7 +84,7 @@ class AnnouncementDetailsPage extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            color: Colors.orange,
+                            // color: Colors.orange,
                             height: 320,
                             child: ListView(
                               padding: const EdgeInsets.all(16.0),

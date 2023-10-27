@@ -20,12 +20,12 @@ class ParentProfileSelectionPage extends StatelessWidget {
           children: [
             profileSelectionStudentCard(
               studentName: 'Yavuz Selim',
-              imageUrl: 'images/img.png',
+              imageUrl: 'images/user.png',
               studentNumber: '12345',
             ),
             profileSelectionStudentCard(
               studentName: 'Abdullah Niane',
-              imageUrl: 'images/img.png',
+              imageUrl: 'images/user.png',
               studentNumber: '67890',
             ),
           ],

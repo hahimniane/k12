@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:maarif_k12/parent/Announcement/announcement_home_page.dart';
+import 'package:maarif_k12/parent/Attendance/attendance_page.dart';
 import 'package:maarif_k12/utils/build_appbar.dart';
 import 'package:maarif_k12/utils/const.dart';
 import 'package:maarif_k12/utils/navigation_helper.dart';
@@ -169,8 +170,6 @@ class NewMenuPage extends StatelessWidget {
             //     ),
             //   ),
 
-            ///this contains me
-
             ,
             Expanded(
               child: Container(
@@ -205,10 +204,16 @@ class NewMenuPage extends StatelessWidget {
                           icon: const AssetImage('images/img_4.png'),
                           label: 'Attendance',
                           color: parentAppColor,
-                          onTap: () {},
+                          onTap: () {
+                            NavigationHelper.pushPage(
+                                context,
+                                const AttendancePage(
+                                  isFromSearch: false,
+                                ));
+                          },
                         ),
                         _buildMenuItem(
-                          icon: const AssetImage('images/img_3.png'),
+                          icon: const AssetImage('images/schedule2.png'),
                           label: 'Schedule',
                           color: const Color(0xff0CA789),
                           onTap: () {
@@ -229,7 +234,7 @@ class NewMenuPage extends StatelessWidget {
                         _buildMenuItem(
                           // icon: const AssetImage(
                           //     'images/information-speaker-notification-announcement-512.ico'),
-                          icon: AssetImage('images/img_6.png'),
+                          icon: AssetImage('images/exam_score.png'),
                           label: 'Exam Score',
                           color: parentAppColor,
                           onTap: () {
@@ -247,7 +252,13 @@ class NewMenuPage extends StatelessWidget {
                           icon: AssetImage('images/payement.png'),
                           label: 'Payment',
                           color: parentAppColor,
-                          onTap: () {},
+                          onTap: () {
+                            NavigationHelper.pushPage(
+                                context,
+                                const AttendancePage(
+                                  isFromSearch: false,
+                                ));
+                          },
                         ),
                       ]
                       //},
